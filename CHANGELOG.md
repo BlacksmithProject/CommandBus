@@ -7,6 +7,10 @@
 
 ### New features
 
+- Add `\BSP\CommandBus`
+- Add `\BSP\Command`
+- Add `\BSP\CommandHandler`
+
 ### Bugfixes
 
 </details>
