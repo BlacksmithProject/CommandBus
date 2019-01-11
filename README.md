@@ -36,5 +36,7 @@ public function doSomethingFromCLI(): Response
     $command = new DoSomething('please');
 
     $this->commandBus->execute($command);
+
+    return new Response('command has been executed.');
 }
 ```
