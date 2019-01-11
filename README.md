@@ -1,5 +1,9 @@
 # BlacksmithProject - CommandBus
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/BlacksmithProject/CommandBus/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/BlacksmithProject/CommandBus/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/BlacksmithProject/CommandBus/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/BlacksmithProject/CommandBus/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/BlacksmithProject/CommandBus/badges/build.png?b=master)](https://scrutinizer-ci.com/g/BlacksmithProject/CommandBus/build-status/master)
+
 ## Why ?
 
 In order to improve my skills, I'm doing my own implementation of a
