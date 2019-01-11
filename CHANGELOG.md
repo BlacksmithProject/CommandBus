@@ -7,6 +7,8 @@
 
 ### New features
 
+- Improve `BSP\CommandBus`'s documentation.
+
 ### Bugfixes
 
 </details>
