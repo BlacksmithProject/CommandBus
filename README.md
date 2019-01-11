@@ -22,3 +22,19 @@ CommandBus.
 You can look for example in the
 [tests/Mock](https://github.com/BlacksmithProject/CommandBus/tree/master/tests/Mock)
 folder.
+
+Now, you only need to inject your CommandBus and execute Commands.
+
+### Example:
+```php
+public function __construct(CommandBus $commandBus) {
+    $this-commandBus = $commandBus;
+}
+
+public function doSomethingFromCLI(): Response
+{
+    $command = new DoSomething('please');
+
+    $this->commandBus->execute($command);
+}
+```
