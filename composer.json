@@ -1,5 +1,5 @@
 {
-    "name": "blacksmith-project/php-library",
+    "name": "blacksmith-project/command-bus",
     "description": "A PHP Library",
     "type": "library",
     "license": "MIT",
