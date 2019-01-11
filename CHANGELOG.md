@@ -7,11 +7,15 @@
 
 ### New features
 
-- Improve `BSP\CommandBus`'s documentation.
-
 ### Bugfixes
 
 </details>
+
+## v0.1.1
+
+### New features
+
+- Improve `BSP\CommandBus`'s documentation.
 
 ## v0.1.0
 
