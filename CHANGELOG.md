@@ -11,6 +11,11 @@
 
 </details>
 
+## v0.1.2
+
+- Add `\BSP\CommandBusException`
+- `BSP\CommandBus` throws an exception if used with unrelated command
+
 ## v0.1.1
 
 ### New features

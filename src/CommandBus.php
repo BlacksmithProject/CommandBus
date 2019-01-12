@@ -18,10 +18,15 @@ abstract class CommandBus
     /** @var CommandHandler[] */
     protected $handlers = [];
 
+    /**
+     * @throws CommandBusException
+     */
     public function execute(Command $command): void
     {
-        if (isset($this->handlers[get_class($command)])) {
-            $this->handlers[get_class($command)]->handle($command);
+        if (!isset($this->handlers[get_class($command)])) {
+            throw new CommandBusException(sprintf('This Commandbus cannot handle command "%s".', get_class($command)));
         }
+
+        $this->handlers[get_class($command)]->handle($command);
     }
 }
