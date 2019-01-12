@@ -5,13 +5,17 @@
 
 ### BREAKING CHANGES
 
-- Change `BSP\` namespace into `BSP\CommandBus\`
-
 ### New features
 
 ### Bugfixes
 
 </details>
+
+## v0.2.0
+
+### BREAKING CHANGES
+
+- Change `BSP\` namespace into `BSP\CommandBus\`
 
 ## v0.1.2
 
