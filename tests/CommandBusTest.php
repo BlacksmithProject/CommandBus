@@ -46,7 +46,7 @@ final class CommandBusTest extends TestCase
     public function testCannotUseCommandBusWithoutHandler(): void
     {
         $this->expectException(CommandBusException::class);
-        $this->expectExceptionMessage('This Commandbus cannot handle command "BSP\Tests\Mock\ServeInCup".');
+        $this->expectExceptionMessage('This Commandbus cannot handle command "BSP\Tests\Mock\ServeCoffeeInCup".');
 
         $command = new ServeCoffeeInCup();
 
