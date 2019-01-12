@@ -9,6 +9,7 @@ use BSP\CommandBus\Tests\Mock\AddSugarToCoffeHandler;
 use BSP\CommandBus\Tests\Mock\Coffee;
 use BSP\CommandBus\Tests\Mock\CoffeeCommandBus;
 use BSP\CommandBus\Tests\Mock\ServeCoffeeInCup;
+use BSP\DrWatson\ExceptionType;
 use PHPUnit\Framework\TestCase;
 
 final class CommandBusTest extends TestCase
@@ -40,16 +41,20 @@ final class CommandBusTest extends TestCase
         $this->assertSame(2, $coffee::$sugars);
     }
 
-    /**
-     * @throws CommandBusException
-     */
     public function testCannotUseCommandBusWithoutHandler(): void
     {
-        $this->expectException(CommandBusException::class);
-        $this->expectExceptionMessage('This Commandbus cannot handle command "BSP\CommandBus\Tests\Mock\ServeCoffeeInCup".');
-
         $command = new ServeCoffeeInCup();
 
-        $this->commandBus->execute($command);
+        try {
+            $this->commandBus->execute($command);
+        } catch (CommandBusException $exception) {
+            $this->assertTrue(ExceptionType::DOMAIN()->equals($exception->type()));
+            $this->assertSame('domain.commandbus.command.unknown', $exception->message());
+            $this->assertSame('"BSP\CommandBus\Tests\Mock\CoffeeCommandBus" handlers.', $exception->suspect());
+            $this->assertSame(
+                'You may have forgotten to add the "BSP\CommandBus\Tests\Mock\ServeCoffeeInCup" command to the "BSP\CommandBus\Tests\Mock\CoffeeCommandBus" CommandBus.',
+                $exception->help()
+            );
+        }
     }
 }

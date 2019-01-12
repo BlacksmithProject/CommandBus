@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace BSP\CommandBus;
 
-final class CommandBusException extends \Exception
+use BSP\DrWatson\DrWatson;
+
+final class CommandBusException extends DrWatson
 {
 }

@@ -7,6 +7,8 @@
 
 ### New features
 
+- update `blacksmith-project/dr-watson`
+
 ### Bugfixes
 
 </details>

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace BSP\CommandBus;
 
+use BSP\DrWatson\ExceptionType;
+
 /**
  * CommandBus execute Command by handling it with the right CommandHandler.
  *
@@ -24,7 +26,12 @@ abstract class CommandBus
     public function execute(Command $command): void
     {
         if (!isset($this->handlers[get_class($command)])) {
-            throw new CommandBusException(sprintf('This Commandbus cannot handle command "%s".', get_class($command)));
+            throw new CommandBusException(
+                ExceptionType::DOMAIN(),
+                'domain.commandbus.command.unknown',
+                sprintf('"%s" handlers.', static::class),
+                sprintf('You may have forgotten to add the "%s" command to the "%s" CommandBus.', get_class($command), static::class)
+            );
         }
 
         $this->handlers[get_class($command)]->handle($command);
