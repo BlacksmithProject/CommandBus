@@ -5,6 +5,8 @@
 
 ### BREAKING CHANGES
 
+- Change `BSP\` namespace into `BSP\CommandBus\`
+
 ### New features
 
 ### Bugfixes

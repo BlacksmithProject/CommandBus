@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BSP;
+namespace BSP\CommandBus;
 
 /**
  * CommandBus execute Command by handling it with the right CommandHandler.
