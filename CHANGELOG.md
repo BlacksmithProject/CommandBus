@@ -7,11 +7,15 @@
 
 ### New features
 
-- update `blacksmith-project/dr-watson`
-
 ### Bugfixes
 
 </details>
+
+## v0.2.1
+
+### New features
+
+- update `blacksmith-project/dr-watson`
 
 ## v0.2.0
 
