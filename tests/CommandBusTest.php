@@ -11,6 +11,14 @@ use PHPUnit\Framework\TestCase;
 
 final class CommandBusTest extends TestCase
 {
+    private $commandBus;
+
+    public function setUp()
+    {
+        $commandHandler = new AddSugarToCoffeHandler();
+        $this->commandBus = new CoffeeCommandBus($commandHandler);
+    }
+
     public function testCommandBus(): void
     {
         $coffee = new Coffee();
@@ -18,10 +26,8 @@ final class CommandBusTest extends TestCase
         $this->assertSame(0, $coffee::$sugars);
 
         $command = new AddSugarToCoffee(2, $coffee);
-        $commandHandler = new AddSugarToCoffeHandler();
-        $commandBus = new CoffeeCommandBus($commandHandler);
 
-        $commandBus->execute($command);
+        $this->commandBus->execute($command);
 
         $this->assertSame(2, $coffee::$sugars);
     }
