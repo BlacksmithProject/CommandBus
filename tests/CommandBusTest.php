@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace BSP\Tests;
+namespace BSP\CommandBus\Tests;
 
-use BSP\CommandBusException;
-use BSP\Tests\Mock\AddSugarToCoffee;
-use BSP\Tests\Mock\AddSugarToCoffeHandler;
-use BSP\Tests\Mock\Coffee;
-use BSP\Tests\Mock\CoffeeCommandBus;
-use BSP\Tests\Mock\ServeCoffeeInCup;
+use BSP\CommandBus\CommandBusException;
+use BSP\CommandBus\Tests\Mock\AddSugarToCoffee;
+use BSP\CommandBus\Tests\Mock\AddSugarToCoffeHandler;
+use BSP\CommandBus\Tests\Mock\Coffee;
+use BSP\CommandBus\Tests\Mock\CoffeeCommandBus;
+use BSP\CommandBus\Tests\Mock\ServeCoffeeInCup;
 use PHPUnit\Framework\TestCase;
 
 final class CommandBusTest extends TestCase
@@ -46,7 +46,7 @@ final class CommandBusTest extends TestCase
     public function testCannotUseCommandBusWithoutHandler(): void
     {
         $this->expectException(CommandBusException::class);
-        $this->expectExceptionMessage('This Commandbus cannot handle command "BSP\Tests\Mock\ServeCoffeeInCup".');
+        $this->expectExceptionMessage('This Commandbus cannot handle command "BSP\CommandBus\Tests\Mock\ServeCoffeeInCup".');
 
         $command = new ServeCoffeeInCup();
 

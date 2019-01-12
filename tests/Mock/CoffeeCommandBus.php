@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace BSP\Tests\Mock;
+namespace BSP\CommandBus\Tests\Mock;
 
-use BSP\CommandBus;
+use BSP\CommandBus\CommandBus;
 
 final class CoffeeCommandBus extends CommandBus
 {

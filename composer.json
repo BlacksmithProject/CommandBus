@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BSP\\": "src/"
+            "BSP\\CommandBus\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BSP\\Tests\\": "tests/"
+            "BSP\\CommandBus\\Tests\\": "tests/"
         }
     }
 }
