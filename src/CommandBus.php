@@ -23,7 +23,7 @@ abstract class CommandBus
     /**
      * @throws CommandBusException
      */
-    public function execute(Command $command): void
+    public function execute($command): void
     {
         if (!isset($this->handlers[get_class($command)])) {
             throw new CommandBusException(

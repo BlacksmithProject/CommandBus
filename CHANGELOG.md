@@ -5,6 +5,8 @@
 
 ### BREAKING CHANGES
 
+- remove `BSP\CommandBus\Command`
+
 ### New features
 
 ### Bugfixes
