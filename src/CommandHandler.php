@@ -5,5 +5,5 @@ namespace BSP\CommandBus;
 
 interface CommandHandler
 {
-    public function handle(Command $command): void;
+    public function handle($command): void;
 }

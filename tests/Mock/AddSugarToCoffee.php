@@ -3,9 +3,7 @@ declare(strict_types=1);
 
 namespace BSP\CommandBus\Tests\Mock;
 
-use BSP\CommandBus\Command;
-
-final class AddSugarToCoffee implements Command
+final class AddSugarToCoffee
 {
     private $nbSugars;
     private $coffee;
