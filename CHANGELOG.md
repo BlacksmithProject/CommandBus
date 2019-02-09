@@ -5,13 +5,17 @@
 
 ### BREAKING CHANGES
 
-- remove `BSP\CommandBus\Command`
-
 ### New features
 
 ### Bugfixes
 
 </details>
+
+## v0.3.0
+
+### BREAKING CHANGES
+
+- remove `BSP\CommandBus\Command`
 
 ## v0.2.1
 
