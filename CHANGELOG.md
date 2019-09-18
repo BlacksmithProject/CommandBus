@@ -4,6 +4,16 @@
 <summary>Unreleased</summary>
 
 ### BREAKING CHANGES
+
+### New features
+
+### Bugfixes
+
+</details>
+
+## v0.4.0
+
+### BREAKING CHANGES
 - remove old classes
 
 ### New features
@@ -11,10 +21,6 @@
 - added `\BSP\CommandBus\SimpleCommandBus`
 - added `\BSP\CommandBus\Contracts\CommandHandlerMap`
 - added `\BSP\CommandBus\SimpleCommandHandlerMap`
-
-### Bugfixes
-
-</details>
 
 ## v0.3.0
 
