@@ -3,6 +3,7 @@
 namespace BSP\CommandBus;
 
 use BSP\CommandBus\Contracts\CommandHandlerMap;
+use BSP\CommandBus\Exception\CommandHandlerClassNameDoesNotEndWithHandler;
 
 final class SimpleCommandHandlerMap implements CommandHandlerMap
 {
@@ -30,8 +31,8 @@ final class SimpleCommandHandlerMap implements CommandHandlerMap
     {
         $handlerClass = \get_class($handler);
 
-        if (false === $this->stringEndsWith($handlerClass, 'CommandHandler')) {
-            return;
+        if (false === $this->stringEndsWith($handlerClass, 'Handler')) {
+            throw new CommandHandlerClassNameDoesNotEndWithHandler();
         }
 
         $commandClass = $this->getCommandClass($handlerClass);
@@ -41,7 +42,9 @@ final class SimpleCommandHandlerMap implements CommandHandlerMap
 
     private function stringEndsWith(string $string, string $endWith): bool
     {
-        return substr($string, -strlen($endWith)) !== $endWith;
+        $text = substr($string, -strlen($endWith));
+
+        return $text === $endWith;
     }
 
     private function getCommandClass(string $commandHandlerClass): string

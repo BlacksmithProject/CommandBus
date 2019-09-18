@@ -21,7 +21,7 @@ In order to improve my skills, I'm doing my own implementation of a CommandBus.
         $command = new AddSugarToCoffee();
         $handler = new AddSugarToCoffeeHandler();
         ```
-- Handlers should be added to a `CommandHandlerMap`:
+- Handlers must be added to a `CommandHandlerMap`:
     ```php
     $map = new SimpleCommandHandlerMap([$handler, $anOthenHandler]);
     $map->add($yetAnOtherHandler);
