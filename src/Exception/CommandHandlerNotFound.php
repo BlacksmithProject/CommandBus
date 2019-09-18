@@ -17,10 +17,12 @@ final class CommandHandlerNotFound extends \RuntimeException
     public static function forCommand(string $commandClass, int $code = 0, Throwable $previous = null): self
     {
         $message = sprintf(
-            "I cannot find a handler for the command `%s`. You should check those possibilities: %s
+            "I cannot find a handler for the command `%s`. %s
+            You should check those possibilities: %s
             - You forgot to inject a CommandHandlerMap to the CommandBus. %s
             - You forgot to add the couple command/handler to your CommandHandlerMap.",
             $commandClass,
+            PHP_EOL,
             PHP_EOL,
             PHP_EOL
         );
