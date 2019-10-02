@@ -3,7 +3,10 @@ declare(strict_types=1);
 
 namespace BSP\CommandBus\Tests\Stub;
 
-final class AddSugarToCoffee
+use BSP\CommandBus\Contracts\AggregateId;
+use BSP\CommandBus\Contracts\Command;
+
+final class AddSugarToCoffee implements Command
 {
     private $nbSugars;
     private $coffee;
@@ -22,5 +25,10 @@ final class AddSugarToCoffee
     public function coffee(): Coffee
     {
         return $this->coffee;
+    }
+
+    public function aggregateId(): AggregateId
+    {
+        return $this->coffee->coffeeId;
     }
 }

@@ -2,6 +2,13 @@
 
 namespace BSP\CommandBus\Tests\Stub;
 
-final class BuyCoffee
+use BSP\CommandBus\Contracts\AggregateId;
+use BSP\CommandBus\Contracts\Command;
+
+final class BuyCoffee implements Command
 {
+    public function aggregateId(): AggregateId
+    {
+        return new CoffeeId();
+    }
 }
