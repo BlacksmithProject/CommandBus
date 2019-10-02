@@ -4,16 +4,22 @@
 <summary>Unreleased</summary>
 
 ### BREAKING CHANGES
+
+### New features
+
+### Bugfixes
+
+</details>
+
+## v0.5.0
+
+### BREAKING CHANGES
 - `\BSP\CommandBus\Contracts\CommandBus::execute` now takes a `\BSP\CommandBus\Contracts\Command` as parameter instead of `object`
 - `\BSP\CommandBus\SimpleCommandBus::execute` now takes a `\BSP\CommandBus\Contracts\Command` as parameter instead of `object`
 
 ### New features
 - added `\BSP\CommandBus\Contracts\AggregateId`
 - added `\BSP\CommandBus\Contracts\Command`
-
-### Bugfixes
-
-</details>
 
 ## v0.4.0
 
