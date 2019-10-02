@@ -16,5 +16,5 @@ interface CommandBus
      * @throws CommandHandlerNotFound
      * @throws CommandHandlerIsNotCallable
      */
-    public function execute(object $command): void;
+    public function execute(Command $command): void;
 }
