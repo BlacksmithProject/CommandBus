@@ -22,11 +22,11 @@ final class SimpleCommandBus implements CommandBus
     {
         $commandClass = \get_class($command);
 
-        if (!isset($this->handlers[$commandClass])) {
+        if (false === isset($this->handlers[$commandClass])) {
             throw CommandHandlerNotFound::forCommand($commandClass);
         }
 
-        if (!is_callable($this->handlers[$commandClass])) {
+        if (false === is_callable($this->handlers[$commandClass])) {
             throw new CommandHandlerIsNotCallable();
         }
 

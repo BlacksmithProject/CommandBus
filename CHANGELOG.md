@@ -6,7 +6,7 @@
 ### BREAKING CHANGES
 
 ### New features
-
+- replace `!` with `false ===` to make codebase more readable for dyslexic people
 ### Bugfixes
 
 </details>
