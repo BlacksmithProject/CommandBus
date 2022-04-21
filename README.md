@@ -23,8 +23,8 @@ In order to improve my skills, I'm doing my own implementation of a CommandBus.
         ```
 - Handlers must be added to a `CommandHandlerMap`:
     ```php
-    $map = new SimpleCommandHandlerMap([$handler, $anOthenHandler]);
-    $map->add($yetAnOtherHandler);
+    $map = new SimpleCommandHandlerMap([$handler, $anotherHandler]);
+    $map->add($yetAnotherHandler);
     ```
 - Your `CommandBus` takes as parameter a `CommandHandlerMap`.
 
